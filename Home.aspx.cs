@@ -9,6 +9,12 @@ public partial class Home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if(Session["post"] != null)
+        {
+            if (Session["post"].ToString() == "out")
+            {
+                MasterPageFile = "~/outsider/outsider.master";
+            }
+        }
     }
 }
